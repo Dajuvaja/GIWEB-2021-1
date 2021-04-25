@@ -1,41 +1,39 @@
-var a;
-var b;
-var resultTemplate = document.getElementById('resultado')
+let a;
+let b;
+let resultTemplate = document.getElementById('resultado')
 
 
-function recogerValores(){
+const recogerValores= () =>{
     a = parseInt(document.getElementById('inputA').value)
     b = parseInt(document.getElementById('inputB').value) 
 }
-function escribirResultado(resultado) {
+const escribirResultado= (resultado) => {
     resultTemplate.value = resultado
 }
 
-let sumar= () =>{
+const sumar= () =>{
     recogerValores();
     escribirResultado(a+b)
 }
 
-let multiplicar = ()=> {
+const multiplicar = ()=> {
     recogerValores();
     escribirResultado(a*b)
 }
 
-let restar = ()=>{
+const restar = ()=>{
     recogerValores()
     escribirResultado(a-b)
 }
 
-let dividir = ()=> {
+const dividir = ()=> {
     recogerValores()
     escribirResultado(a/b)
 }
 
-let elevar = () =>{
+const elevar = () =>{
     recogerValores()
     escribirResultado(Math.pow(a,b))
 }
 
-function hacerAlgo(x, y){
-    return x===y
-}
+
